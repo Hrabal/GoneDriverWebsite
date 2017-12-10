@@ -1,0 +1,354 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #111;
+}
+body, pre {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+  font-family: 'VT323', monospace;
+  text-shadow: 0 0 1px rgba(255,255,255,.1),
+               0 0 2px rgba(255,255,255,.1), 
+               0 0 3px rgba(255,255,255,.1), 
+               0 0 4px rgba(255,118,0,.1), 
+               0 0 7px rgba(226,216,30,.1), 
+               0 0 8px rgba(193,52,182,.1), 
+               0 0 10px rgba(193,52,182,.1);
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 5rem;
+
+}
+/*
+ * Header
+ */
+
+.masthead {
+  margin-bottom: 2rem;
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+}
+
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: 700;
+  color: rgba(255,255,255,.5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255,255,255,.25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 48em) {
+  .masthead-brand {
+    float: left;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 1.5rem;
+}
+.cover .btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: 700;
+}
+
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: rgba(255,255,255,.5);
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 40em) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (max-width: 62em) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 42rem;
+  }
+}
+@-webkit-keyframes blinkAnim {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes blinkAnim {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+/*   OWLS   */
+
+.square {
+  z-index: 1000;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  margin: auto;
+}
+.square .owl {
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  width: 50%;
+  height: 95%;
+  background-color: #1797ad;
+}
+.square .owl:before {
+  background-color: #111;
+  position: absolute;
+  top: -125px;
+  left: -25px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: block;
+  content: '';
+}
+.square .owl .eyes {
+  position: absolute;
+  width: 100%;
+  top: 140px;
+  border-radius: 50%;
+  background-color: #014351;
+  width: 110px;
+  height: 110px;
+  -webkit-transition: all 0.03s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  overflow: hidden;
+}
+.square .owl .eyes:before {
+  content: '';
+  position: absolute;
+  width: 110%;
+  height: 100%;
+  top: 10px;
+  left: -5px;
+  border-radius: 50%;
+  display: block;
+  background-color: white;
+  z-index: 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.square .owl .eyes.closed:before {
+  height: 10%;
+  top: 55px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.square .owl .eyes.half-closed:before {
+  height: 50%;
+}
+
+.square .owl .eyes .retina {
+  content: '';
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  top: 40px;
+  left: 40px;
+  z-index: 10;
+  background-color: #014351;
+  -webkit-transition: all 0.7s linear;
+  transition: all 0.7s linear;
+}
+.square .owl .eyes.left {
+  left: 0;
+}
+.square .owl .eyes.right {
+  right: 0;
+}
+.square .owl .nose {
+  position: absolute;
+  top: 225px;
+  left: 80px;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 25px solid #EAD60E;
+}
+.square .owl .wing {
+  height: 100px;
+  width: 220px;
+  position: absolute;
+  top: 325px;
+  background-color: #014351;
+}
+.square .owl .wing.right {
+  border-radius: 0px 50px;
+  -webkit-transform: rotate(80deg);
+          transform: rotate(80deg);
+  right: -90px;
+}
+.square .owl .wing.left {
+  border-radius: 50px 0px;
+  -webkit-transform: rotate(100deg);
+          transform: rotate(100deg);
+  left: -90px;
+}
+
+
+/*   DRIVERS   */
+#giova .owl {
+  background-color: #313E50;
+}
+#giova .owl .wing {
+  background-color: #251B17;
+}
+#giova .owl .eyes {
+  background-color: #251B17;
+}
+#giova .owl .retina {
+  background-color: #251B17;
+}
+
+#luca .owl {
+  background-color: #003554;
+}
+#luca .owl .wing {
+  background-color: #25201F;
+}
+#luca .owl .eyes {
+  background-color: #2E2826;
+}
+#luca .owl .retina {
+  background-color: #2E2826;
+}
+
+#fede .owl {
+  background-color: #3E505B;
+}
+#fede .owl .wing {
+  background-color: #2C272F;
+}
+#fede .owl .eyes {
+  background-color: #5F5566;
+}
+#fede .owl .retina {
+  background-color: #5F5566;
+}
