@@ -94,14 +94,14 @@ class Home(TempyPage):
                         H2()(A(href='https://www.facebook.com/GoneDriver/')(I(klass='fab fa-facebook-square'), ' facebook.com/GoneDriver'))
                     ),
                     Div(klass='col')(Br(),Br(),
-                        H1()('Space Owls Blues weirdos since \'05'),
+                        H1()('Space Owls Blues weirdos since \'15'),
                         H2()(
                             Pre()("""Get in touch: // Fede - +39 3200653999 \n Press contact: // Elisa - rockngraph@gmail.com""")
                         ),
                     ),
                     Div(klass='col')(Br(),Br(),
                         H2()(
-                            Pre()("""Next Shows:\n2018-01-06\nCarbone Festival @ Manitese\nVia Camposanto, 41034 Finale Emilia, MO, Italy\n\n2018-01-06\nEkdina\nVia Livorno, 41034 Carpi, MO, Italy""")
+                            Pre()("""Next Shows:\n2018-01-06\nCarbone Festival @ Manitese\nVia Camposanto, 41034 Finale Emilia, MO, Italy\n\n2018-02-17\nEkdina\nVia Livorno, 41034 Carpi, MO, Italy""")
                         )
                     )
                 ),
